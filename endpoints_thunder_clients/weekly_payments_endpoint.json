@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "weekly_payments endpoint",
+    "dateExported": "2023-11-05T11:08:49.902Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f4fa4422-214b-4aee-83d4-9a26e1b0eef0",
+            "colId": "727a2674-5392-449c-b606-e6436cded2fe",
+            "containerId": "",
+            "name": "get all weekly payments",
+            "url": "localhost:6789/api/v1/weekly_payments",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-05T07:10:05.339Z",
+            "modified": "2023-11-05T07:10:05.339Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4ab1e7aa-7348-4255-8a43-161e7cf92334",
+            "colId": "727a2674-5392-449c-b606-e6436cded2fe",
+            "containerId": "",
+            "name": "get all payments to a particular user",
+            "url": "localhost:6789/api/v1/weekly_payments/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-05T07:10:12.097Z",
+            "modified": "2023-11-05T07:10:12.097Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2ad8cace-ec00-45fd-b6f0-1d93d16285c4",
+            "colId": "727a2674-5392-449c-b606-e6436cded2fe",
+            "containerId": "",
+            "name": "create a payment to a user",
+            "url": "localhost:6789/api/v1/weekly_payments",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-05T07:10:18.815Z",
+            "modified": "2023-11-05T10:24:53.375Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 3,\n  \"year_\": 2023,\n  \"month\": 11,\n  \"week\": 1,\n  \"amount\": 2000\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

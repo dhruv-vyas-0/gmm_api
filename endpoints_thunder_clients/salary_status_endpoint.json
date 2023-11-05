@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "salary_status endpoint",
+    "dateExported": "2023-11-05T11:08:27.150Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b04882ef-dc61-484f-ab3e-7dda6c3f5915",
+            "colId": "5891f278-b335-4903-9116-86e3fdefd209",
+            "containerId": "",
+            "name": "get all salary status",
+            "url": "localhost:6789/api/v1/salary_status",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-05T06:10:39.141Z",
+            "modified": "2023-11-05T06:10:39.141Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3ef08d2b-79b7-49df-98f9-4108508fe2b6",
+            "colId": "5891f278-b335-4903-9116-86e3fdefd209",
+            "containerId": "",
+            "name": "get salary satatus by id",
+            "url": "localhost:6789/api/v1/salary_status/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-05T06:10:31.806Z",
+            "modified": "2023-11-05T06:35:43.849Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9b524216-c9c6-4bc8-bdf5-7a5711a80831",
+            "colId": "5891f278-b335-4903-9116-86e3fdefd209",
+            "containerId": "",
+            "name": "update salary status",
+            "url": "localhost:6789/api/v1/salary_status/3",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-05T06:36:21.544Z",
+            "modified": "2023-11-05T10:19:58.587Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"grand_total\": 0,\n  \"upad\": 0,\n  \"jama\": 0,\n  \"credited\": 0\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

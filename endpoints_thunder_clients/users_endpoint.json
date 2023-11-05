@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "users endpoint",
+    "dateExported": "2023-11-05T11:07:42.127Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2060aa04-0cca-4314-ab65-11b053f9acdd",
+            "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
+            "containerId": "",
+            "name": "get all users",
+            "url": "localhost:6789/api/v1/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-05T05:43:14.003Z",
+            "modified": "2023-11-05T05:43:14.003Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "88c0e57d-35c4-449a-a166-3f5dd77eb763",
+            "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
+            "containerId": "",
+            "name": "get user by id",
+            "url": "localhost:6789/api/v1/users/4",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-05T05:43:23.788Z",
+            "modified": "2023-11-05T05:43:23.788Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6de6aef9-7768-4476-83ec-4c39e7265195",
+            "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
+            "containerId": "",
+            "name": "create a new user",
+            "url": "localhost:6789/api/v1/users",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-05T05:43:30.924Z",
+            "modified": "2023-11-05T10:18:14.388Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"test\",\n  \"gender\": \"male\",\n  \"age\": 10,\n  \"email\": \"test@test.com\",\n  \"password\": \"test1234\",\n  \"role\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "64a490cb-6b81-4cb9-bfa6-ee02e34ddb4b",
+            "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
+            "containerId": "",
+            "name": "update a user",
+            "url": "localhost:6789/api/v1/users/4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-05T05:43:37.828Z",
+            "modified": "2023-11-05T10:17:46.011Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Kashyap\",\n  \"gender\": \"male\",\n  \"age\": 19,\n  \"email\": \"kashyap@test.com\",\n  \"password\": \"kashyap6969\",\n  \"role\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8d5944e6-5b66-42a6-9ad2-bb93be00c8a4",
+            "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
+            "containerId": "",
+            "name": "delete a user",
+            "url": "localhost:6789/api/v1/users/5",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-05T05:43:47.347Z",
+            "modified": "2023-11-05T10:18:23.791Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

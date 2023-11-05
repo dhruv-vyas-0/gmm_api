@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "work_entry endpoint",
+    "dateExported": "2023-11-05T11:09:15.294Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9aac0e29-87f5-4c57-bc31-33dc176977a0",
+            "colId": "24ba12c8-413c-4374-9f38-0544b61f461b",
+            "containerId": "",
+            "name": "get all work entries",
+            "url": "localhost:6789/api/v1/work_entry",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-05T07:43:43.655Z",
+            "modified": "2023-11-05T07:43:43.655Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2e28cfaf-8af8-4bf7-a55e-af0065bc93b3",
+            "colId": "24ba12c8-413c-4374-9f38-0544b61f461b",
+            "containerId": "",
+            "name": "get a particular user's all work",
+            "url": "localhost:6789/api/v1/work_entry/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-05T07:43:50.863Z",
+            "modified": "2023-11-05T10:22:14.201Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f991af11-447c-4c67-9135-d4d00cf5e77d",
+            "colId": "24ba12c8-413c-4374-9f38-0544b61f461b",
+            "containerId": "",
+            "name": "create a wrok entry for a user",
+            "url": "localhost:6789/api/v1/work_entry",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-05T07:43:58.199Z",
+            "modified": "2023-11-05T10:24:01.279Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 3, \n  \"date_\": \"2023-11-05\", \n  \"pattern\":\"patern 3\", \n  \"design\": \"dull\", \n  \"colour\": \"blue\", \n  \"size_\": 5, \n  \"piece\": 310, \n  \"rate\": 8, \n  \"upad\": 0, \n  \"jama\": 0\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

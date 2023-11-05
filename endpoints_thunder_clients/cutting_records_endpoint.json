@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "cutting_records endpoint",
+    "dateExported": "2023-11-05T11:09:41.925Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9464e3f5-b2b2-442f-911a-1a4fdff85d0c",
+            "colId": "612a517b-3b9c-458d-88d2-198d50df91e2",
+            "containerId": "",
+            "name": "get all cutting records",
+            "url": "localhost:6789/api/v1/cutting_records",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-05T09:51:05.453Z",
+            "modified": "2023-11-05T09:51:05.453Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ff2f9b97-956f-4ef0-891f-cc51b2b9301e",
+            "colId": "612a517b-3b9c-458d-88d2-198d50df91e2",
+            "containerId": "",
+            "name": "get cutting records of a person",
+            "url": "localhost:6789/api/v1/cutting_records/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-05T09:56:44.075Z",
+            "modified": "2023-11-05T09:56:44.075Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ebc238fc-d0d3-454c-8556-2f0d01ff966f",
+            "colId": "612a517b-3b9c-458d-88d2-198d50df91e2",
+            "containerId": "",
+            "name": "create cutting record",
+            "url": "localhost:6789/api/v1/cutting_records",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-05T10:07:09.402Z",
+            "modified": "2023-11-05T10:28:35.868Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"lot_no\": \"K3\",\n  \"user_id\": 3,\n  \"date_\": \"2023-11-05\",\n  \"pattern\": \"pattern 4\",\n  \"fabric\": \"cotton\",\n  \"colour\": \"blue\",\n  \"s1\": 0,\n  \"s2\": 330,\n  \"s3\": 34,\n  \"s4\": 0,\n  \"s5\": 0,\n  \"weight\": 120.67,\n  \"price\": 25\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5a7e72e5-66ed-4642-8c18-ca411004f505",
+            "colId": "612a517b-3b9c-458d-88d2-198d50df91e2",
+            "containerId": "",
+            "name": "delete a cutting record",
+            "url": "localhost:6789/api/v1/cutting_records/K3",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-11-05T10:32:24.425Z",
+            "modified": "2023-11-05T10:32:24.425Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
