@@ -31,3 +31,9 @@ DB_DATABASE='NAME_OF_DATABASE_YOU_CREATED'
 
 #### Running the API
 - If you did everything alright, you can start API server by typing `node app.js` into the terminal of `gmm_api` directory.
+
+#### Play around with the API
+- I have included `thunder_client_endpoint` directory to the repo.
+- You have to install thunderclient extension in VSCode and import the collection files given in that folder.
+- Now you can test various end points and methods with this API.
+- You can also login to your mysql server to see the changes in database. ;)
