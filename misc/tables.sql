@@ -1,11 +1,15 @@
 create table users(
 user_id INT PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(20) NOT NULL,
-gender VARCHAR(6) NOT NULL,
-age INT NOT NULL,
-email VARCHAR(255) NOT NULL,
+email VARCHAR(25) NOT NULL,
+work_role VARCHAR(10)
+);
+
+create table credentials(
+user_id INT NOT NULL,
 password VARCHAR(255) NOT NULL,
-role INT
+role VARCHAR(10) NOT NULL,
+FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 create table salary_status(
@@ -63,4 +67,3 @@ total_price FLOAT AS (weight * price) STORED,
 ratio FLOAT AS (total_price / total_cutting) STORED,
 FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-

@@ -14,4 +14,3 @@ FOR EACH ROW
 UPDATE salary_status
 SET credited = credited + NEW.amount
 WHERE salary_status.user_id = NEW.user_ID;
-

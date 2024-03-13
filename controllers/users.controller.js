@@ -37,9 +37,9 @@ const usersController = {
     // POST : create a new user
     createUser: async (req, res) => {
         try {
-            const { name, gender, age, email, password, role } = req.body;
-            const sql = 'INSERT INTO users(name, gender, age, email, password, role) VALUES(?, ?, ?, ?, ?, ?);'
-            const [rows, fields] = await pool.query(sql, [name, gender, age, email, password, role]);
+            const { name, email, work_role } = req.body;
+            const sql = 'INSERT INTO users(name, email, work_role) VALUES(?, ?, ?);'
+            const [rows, fields] = await pool.query(sql, [name, email, work_role]);
             res.status(201).json({
                 insertId: rows.insertId,
                 data: 'User created'
@@ -56,9 +56,9 @@ const usersController = {
     updateUser: async (req, res) => {
         try {
             const { id } = req.params;
-            const { name, gender, age, email, password, role } = req.body;
-            const sql = 'UPDATE users SET name = ?, gender = ?, age = ?, email = ?, password = ?, role = ? WHERE user_id = ?;';
-            const [rows, fields] = await pool.query(sql, [name, gender, age, email, password, role, id]);
+            const { name, email, work_role } = req.body;
+            const sql = 'UPDATE users SET name = ?, email = ?, work_role = ? WHERE user_id = ?;';
+            const [rows, fields] = await pool.query(sql, [name, email, work_role, id]);
             res.status(200).json({
                 data: 'User Updated'
             });
