@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "users endpoint",
-    "dateExported": "2023-11-05T11:07:42.127Z",
+    "dateExported": "2024-03-13T13:11:14.883Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -24,11 +24,11 @@
             "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
             "containerId": "",
             "name": "get user by id",
-            "url": "localhost:6789/api/v1/users/4",
+            "url": "localhost:6789/api/v1/users/1",
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-11-05T05:43:23.788Z",
-            "modified": "2023-11-05T05:43:23.788Z",
+            "modified": "2024-03-13T11:32:30.713Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -42,12 +42,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-11-05T05:43:30.924Z",
-            "modified": "2023-11-05T10:18:14.388Z",
+            "modified": "2024-03-13T11:35:53.761Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"test\",\n  \"gender\": \"male\",\n  \"age\": 10,\n  \"email\": \"test@test.com\",\n  \"password\": \"test1234\",\n  \"role\": 1\n}",
+                "raw": "{\n  \"name\": \"Dhruv\",\n  \"email\": \"dv@test.com\",\n  \"work_role\": \"Mover\"\n}",
                 "form": []
             },
             "tests": []
@@ -57,16 +57,16 @@
             "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
             "containerId": "",
             "name": "update a user",
-            "url": "localhost:6789/api/v1/users/4",
+            "url": "localhost:6789/api/v1/users/1",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2023-11-05T05:43:37.828Z",
-            "modified": "2023-11-05T10:17:46.011Z",
+            "modified": "2024-03-13T11:34:57.303Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Kashyap\",\n  \"gender\": \"male\",\n  \"age\": 19,\n  \"email\": \"kashyap@test.com\",\n  \"password\": \"kashyap6969\",\n  \"role\": 1\n}",
+                "raw": "{\n  \"name\": \"Kashyap\",\n  \"email\": \"kashyap@test.com\",\n  \"work_role\": \"Cutter\"\n}",
                 "form": []
             },
             "tests": []
@@ -76,11 +76,11 @@
             "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
             "containerId": "",
             "name": "delete a user",
-            "url": "localhost:6789/api/v1/users/5",
+            "url": "localhost:6789/api/v1/users/2",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-11-05T05:43:47.347Z",
-            "modified": "2023-11-05T10:18:23.791Z",
+            "modified": "2024-03-13T11:36:12.391Z",
             "headers": [],
             "params": [],
             "tests": []

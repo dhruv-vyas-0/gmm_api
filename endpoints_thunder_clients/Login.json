@@ -1,0 +1,66 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Login",
+    "dateExported": "2024-03-13T13:10:34.571Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "19e4e5e9-26df-4a15-aae6-16ae7c65e33c",
+            "colId": "59dbeef0-4597-4065-9175-a2f4e2a0dcac",
+            "containerId": "",
+            "name": "Register User",
+            "url": "localhost:6789/api/v1/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-13T12:03:39.470Z",
+            "modified": "2024-03-13T12:22:53.281Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 1,\n  \"password\": \"Dhruv@123\",\n  \"role\": \"employee\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4e0d3edb-2a3c-4da1-9b99-72d47fcb5cd9",
+            "colId": "59dbeef0-4597-4065-9175-a2f4e2a0dcac",
+            "containerId": "",
+            "name": "Update Password or Role",
+            "url": "localhost:6789/api/v1/register",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-13T12:12:30.695Z",
+            "modified": "2024-03-13T12:12:30.695Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 4,\n  \"password\": \"Dhruv@123\",\n  \"role\": \"employee\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a6bff3a-ec30-40e3-aece-bbf5e952f813",
+            "colId": "59dbeef0-4597-4065-9175-a2f4e2a0dcac",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:6789/api/v1/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-13T13:06:59.852Z",
+            "modified": "2024-03-13T13:06:59.852Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user_id\": 1,\n  \"password\": \"Dhruv@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
