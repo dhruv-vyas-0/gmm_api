@@ -14,3 +14,9 @@ FOR EACH ROW
 UPDATE salary_status
 SET credited = credited + NEW.amount
 WHERE salary_status.user_id = NEW.user_ID;
+
+CREATE TRIGGER user_registered AFTER INSERT ON credentials
+FOR EACH ROW
+UPDATE users
+SET is_registered = 1
+WHERE users.user_id = NEW.user_id;

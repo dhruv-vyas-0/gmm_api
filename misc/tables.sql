@@ -2,7 +2,8 @@ create table users(
 user_id INT PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(20) NOT NULL,
 email VARCHAR(25) NOT NULL,
-work_role VARCHAR(10)
+work_role VARCHAR(10),
+is_registered BOOLEAN DEFAULT 0
 );
 
 create table credentials(
