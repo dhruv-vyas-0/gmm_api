@@ -6,6 +6,13 @@ const usersController = {
         try {
             const sql = 'SELECT * FROM users;';
             const [rows, fields] = await pool.query(sql);
+
+            for (let i = 0; i < rows.length; i++) {
+                let salary_sql = "SELECT grand_total, upad, jama, payable, credited, pending FROM salary_status WHERE user_id = ?;";
+                const [data, fields] = await pool.query(salary_sql, [rows[i].user_id]);
+                rows[i].accounting = data[0];
+            }
+
             res.status(200).json({
                 data: rows
             });
@@ -23,6 +30,9 @@ const usersController = {
             const { id } = req.params;
             const sql = 'SELECT * FROM users WHERE user_id = ?;';
             const [rows, fields] = await pool.query(sql, [id]);
+            let salary_sql = "SELECT grand_total, upad, jama, payable, credited, pending FROM salary_status WHERE user_id = ?;";
+            const [data, fields_] = await pool.query(salary_sql, [id]);
+            rows[0].accounting = data[0];
             res.status(200).json({
                 data: rows[0]
             });
