@@ -14,12 +14,14 @@ const usersController = {
             }
 
             res.status(200).json({
+                status: 200,
                 data: rows
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -34,12 +36,14 @@ const usersController = {
             const [data, fields_] = await pool.query(salary_sql, [id]);
             rows[0].accounting = data[0];
             res.status(200).json({
+                status: 200,
                 data: rows[0]
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -51,13 +55,15 @@ const usersController = {
             const sql = 'INSERT INTO users(name, email, work_role) VALUES(?, ?, ?);'
             const [rows, fields] = await pool.query(sql, [name, email, work_role]);
             res.status(201).json({
+                status: 200,
                 insertId: rows.insertId,
                 data: 'User created'
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -70,12 +76,14 @@ const usersController = {
             const sql = 'UPDATE users SET name = ?, email = ?, work_role = ? WHERE user_id = ?;';
             const [rows, fields] = await pool.query(sql, [name, email, work_role, id]);
             res.status(200).json({
+                status: 200,
                 data: 'User Updated'
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -87,12 +95,14 @@ const usersController = {
             const sql = 'DELETE from users WHERE user_id = ?;';
             const [rows, fields] = await pool.query(sql, [id]);
             res.status(200).json({
+                status: 200,
                 data: 'User Deleted'
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     }

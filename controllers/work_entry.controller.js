@@ -7,12 +7,14 @@ const workEntryController = {
             const sql = 'SELECT * FROM work_entry;';
             const [rows, fields] = await pool.query(sql);
             res.status(200).json({
+                status: 200,
                 data: rows
             });
         } catch (error) {
             console.log(error.message)
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -24,12 +26,14 @@ const workEntryController = {
             const sql = 'SELECT * FROM work_entry WHERE user_id = ?;';
             const [rows, fields] = await pool.query(sql, [id]);
             res.status(200).json({
+                status: 200,
                 data: rows
             });
         } catch (error) {
             console.log(error.message)
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -40,13 +44,15 @@ const workEntryController = {
             const { user_id, date_, pattern, design, colour, size_, piece, rate, upad, jama } = req.body;
             const sql = 'INSERT INTO work_entry(user_id, date_, pattern, design, colour, size_, piece, rate, upad, jama) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
             const [rows, fields] = await pool.query(sql, [user_id, date_, pattern, design, colour, size_, piece, rate, upad, jama]);
-            res.status(201).json({
+            res.status(200).json({
+                status: 200,
                 data: "Work has been created. It will be reflected into salary status."
             })
         } catch (error) {
             console.log(error.message)
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     }

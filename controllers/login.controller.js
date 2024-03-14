@@ -30,7 +30,8 @@ const loginController = {
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },

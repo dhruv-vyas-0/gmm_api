@@ -14,6 +14,7 @@ const dashboardSalesController = {
             });
         } catch (error) {
             res.status(500).json({
+                status:500,
                 message: error.message
             });
         }

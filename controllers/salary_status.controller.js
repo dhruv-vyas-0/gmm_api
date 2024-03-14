@@ -7,12 +7,14 @@ const salaryStatusController = {
             const sql = 'SELECT * FROM salary_status;';
             const [rows, fields] = await pool.query(sql);
             res.status(200).json({
+                status: 200,
                 data: rows
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                error: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -24,12 +26,14 @@ const salaryStatusController = {
             const sql = 'SELECT * FROM salary_status WHERE user_id = ?;';
             const [rows, fields] = await pool.query(sql, [id]);
             res.status(200).json({
+                status: 200,
                 data: rows[0]
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                error: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -42,12 +46,14 @@ const salaryStatusController = {
             const sql = 'UPDATE salary_status SET grand_total = ?, upad = ?, jama = ?, credited = ?;';
             const [rows, fields] = await pool.query(sql, [grand_total, upad, jama, credited]);
             res.status(200).json({
+                status: 200,
                 data: 'Salary status updated'
             });
         } catch(error) {
             console.log(error.message);
             res.status(500).json({
-                error: error.message
+                status: 500,
+                message: error.message
             });
         }
     }

@@ -7,12 +7,14 @@ const weeklyPaymnetsController = {
             const sql = 'SELECT * FROM weekly_payments;';
             const [rows, fields] = await pool.query(sql);
             res.status(200).json({
+                status: 200,
                 data: rows
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -24,12 +26,14 @@ const weeklyPaymnetsController = {
             const sql = 'SELECT * FROM weekly_payments WHERE user_id = ?;';
             const [rows, fields] = await pool.query(sql, [id]);
             res.status(200).json({
+                status: 200,
                 data: rows
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     },
@@ -40,14 +44,16 @@ const weeklyPaymnetsController = {
             const { user_id, year_, month, week, amount } = req.body;
             const sql = 'INSERT INTO weekly_payments(user_id, year_, month, week, amount) values(?, ?, ?, ?, ?);';
             const [rows, fields] = await pool.query(sql, [user_id, year_, month, week, amount]);
-            res.status(201).json({
+            res.status(200).json({
+                status: 200,
                 paymentId: rows.insertId,
                 data: 'Payment was processed. Please check salary_status for confirmation.'
             });
         } catch (error) {
             console.log(error.message);
             res.status(500).json({
-                data: error.message
+                status: 500,
+                message: error.message
             });
         }
     }
