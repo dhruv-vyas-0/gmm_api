@@ -68,3 +68,10 @@ total_price FLOAT AS (weight * price) STORED,
 ratio FLOAT AS (total_price / total_cutting) STORED,
 FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
+
+CREATE TABLE monthly_sales(
+year INT NOT NULL,
+month INT NOT NULL,
+sales INT NOT NULL DEFAULT 0,
+PRIMARY KEY(year, month)
+);
