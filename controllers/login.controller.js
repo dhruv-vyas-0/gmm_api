@@ -13,9 +13,7 @@ const loginController = {
                     message: "No such user"
                 });
             } else if (password == rows[0].password) {
-                console.log(user_id)
                 const [user, fields] = await pool.query("SELECT * FROM users WHERE user_id = ?;", [user_id]);
-                console.log(user)
                 res.status(200).json({
                     message: "Login successfull",
                     role: rows[0].role,
