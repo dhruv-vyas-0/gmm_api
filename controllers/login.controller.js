@@ -10,17 +10,20 @@ const loginController = {
             const [rows, fields] = await pool.query("SELECT password, role FROM credentials WHERE user_id = ?;", [user_id]);
             if (rows.length === 0) {
                 res.status(401).json({
+                    status: 401,
                     message: "No such user"
                 });
             } else if (password == rows[0].password) {
                 const [user, fields] = await pool.query("SELECT * FROM users WHERE user_id = ?;", [user_id]);
                 res.status(200).json({
+                    status: 200,
                     message: "Login successfull",
                     role: rows[0].role,
                     data: user[0]
                 })
             } else {
                 res.status(401).json({
+                    status: 401,
                     message: "Invalid Password"
                 })
             }
