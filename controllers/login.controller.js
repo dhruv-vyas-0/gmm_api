@@ -4,8 +4,9 @@ const loginController = {
     // POST : Attempt login
     login: async (req, res) => {
         try {
-            const { user_id, password } = req.body;
-            const [rows, fields] = await pool.query("SELECT password, role FROM credentials WHERE user_id = ?;", [user_id]);
+            const { email, password } = req.body;
+            const [user_id, temp] = await pool.query("SELECT user_id FROM users WHERE email = ?", [email]);
+            const [rows, fields] = await pool.query("SELECT password, role FROM credentials WHERE user_id = ?;", [user_id[0]]);
             if (rows.length === 0) {
                 res.status(401).json({
                     message: "No such user"
