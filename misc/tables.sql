@@ -1,19 +1,19 @@
-create table users(
+CREATE TABLE users(
 user_id INT PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(20) NOT NULL,
-email VARCHAR(25) NOT NULL,
+email VARCHAR(255) NOT NULL,
 work_role VARCHAR(10),
 is_registered BOOLEAN DEFAULT 0
 );
 
-create table credentials(
+CREATE TABLE credentials(
 user_id INT NOT NULL,
 password VARCHAR(255) NOT NULL,
 role VARCHAR(10) NOT NULL,
 FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-create table salary_status(
+CREATE TABLE salary_status(
 user_id INT PRIMARY KEY,
 grand_total FLOAT NOT NULL,
 upad FLOAT NOT NULL,
@@ -24,35 +24,97 @@ pending FLOAT AS (payable - credited) STORED,
 FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-create table weekly_payments(
+CREATE TABLE salary_payments(
 payment_id INT PRIMARY KEY AUTO_INCREMENT,
 user_id INT NOT NULL,
-year_ YEAR NOT NULL,
-month INT NOT NULL,
-week INT NOT NULL,
+date DATE NOT NULL DEFAULT (CURDATE()),
 amount FLOAT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-create table work_entry(
-user_id INT NOT NULL,
-date_ DATE NOT NULL,
-pattern VARCHAR(25) NOT NULL,
-design VARCHAR(25) NOT NULL,
-colour VARCHAR(10) NOT NULL,
-size_ INT NOT NULL,
-piece INT NOT NULL,
-rate FLOAT NOT NULL,
-total FLOAT AS (piece*rate) STORED NOT NULL,
-upad FLOAT DEFAULT 0,
-jama FLOAT DEFAULT 0,
-FOREIGN KEY (user_id) REFERENCES users(user_id)
+CREATE TABLE patterns(
+pattern VARCHAR(20) PRIMARY KEY
 );
 
-create table cutting_records(
+CREATE TABLE designs(
+design VARCHAR(20) PRIMARY KEY
+);
+
+CREATE TABLE colours(
+colour VARCHAR(10) PRIMARY KEY
+);
+
+CREATE TABLE sizes(
+size INT PRIMARY KEY
+);
+
+CREATE TABLE work_entry(
+user_id INT NOT NULL,
+date DATE NOT NULL DEFAULT (CURDATE()),
+pattern VARCHAR(20) NOT NULL,
+design VARCHAR(20) NOT NULL,
+colour VARCHAR(10) NOT NULL,
+size INT NOT NULL,
+piece INT NOT NULL,
+rate FLOAT NOT NULL,
+total FLOAT AS (piece * rate) STORED NOT NULL,
+upad FLOAT DEFAULT 0,
+jama FLOAT DEFAULT 0,
+FOREIGN KEY (user_id) REFERENCES users(user_id),
+FOREIGN KEY (pattern) REFERENCES patterns(pattern),
+FOREIGN KEY (design) REFERENCES designs(design),
+FOREIGN KEY (colour) REFERENCES colours(colour),
+FOREIGN KEY (size) REFERENCES sizes(size)
+);
+
+CREATE TABLE inventory(
+pattern VARCHAR(20) NOT NULL,
+design VARCHAR(20) NOT NULL,
+colour VARCHAR(10) NOT NULL,
+size INT NOT NULL,
+stock INT NOT NULL DEFAULT 0,
+cost FLOAT NOT NULL DEFAULT 0,
+margin FLOAT NOT NULL DEFAULT 0.1,
+min_price FLOAT NOT NULL AS (cost * margin) STORED,
+PRIMARY KEY(pattern, design, colour, size),
+FOREIGN KEY (pattern) REFERENCES patterns(pattern),
+FOREIGN KEY (design) REFERENCES designs(design),
+FOREIGN KEY (colour) REFERENCES colours(colour),
+FOREIGN KEY (size) REFERENCES sizes(size)
+);
+
+CREATE TABLE customers(
+customer_id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(20) NOT NULL,
+email VARCHAR(255) NOT NULL,
+phone VARCHAR(10)
+);
+
+CREATE TABLE customer_bill(
+customer_id INT PRIMARY KEY,
+amount FLOAT NOT NULL,
+FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
+);
+
+CREATE TABLE sells_record(
+selling_id INT PRIMARY KEY AUTO_INCREMENT,
+customer_id INT NOT NULL,
+pattern VARCHAR(20) NOT NULL,
+design VARCHAR(20) NOT NULL,
+colour VARCHAR(10) NOT NULL,
+size INT NOT NULL,
+pieces INT NOT NULL,
+FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+FOREIGN KEY (pattern) REFERENCES patterns(pattern),
+FOREIGN KEY (design) REFERENCES designs(design),
+FOREIGN KEY (colour) REFERENCES colours(colour),
+FOREIGN KEY (size) REFERENCES sizes(size)
+);
+
+CREATE TABLE cutting_records(
 lot_no VARCHAR(10) NOT NULL PRIMARY KEY,
 user_id INT NOT NULL,
-date_ DATE NOT NULL,
+date DATE NOT NULL DEFAULT (CURDATE()),
 pattern VARCHAR(25) NOT NULL,
 fabric VARCHAR(25) NOT NULL,
 colour VARCHAR(10) NOT NULL,
