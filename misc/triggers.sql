@@ -62,3 +62,4 @@ SET amount = amount + (
     AND inventory.colour = NEW.colour
     AND inventory.size = NEW.size
 );
+

@@ -137,3 +137,4 @@ month INT NOT NULL,
 sales INT NOT NULL DEFAULT 0,
 PRIMARY KEY(year, month)
 );
+
