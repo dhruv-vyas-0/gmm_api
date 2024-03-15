@@ -40,3 +40,25 @@ AFTER INSERT ON customers
 FOR EACH ROW
 INSERT INTO customer_bill(customer_id, amount)
 VALUES (NEW.customer_id, 0);
+
+CREATE TRIGGER deduct_stock_on_sell
+AFTER INSERT ON sells_record
+FOR EACH ROW
+UPDATE inventory
+SET inventory.stock = inventory.stock - NEW.pieces
+WHERE inventory.pattern = NEW.pattern
+AND inventory.design = NEW.design
+AND inventory.colour = NEW.colour
+AND inventory.size = NEW.size;
+
+CREATE TRIGGER increase_bill_after_sell
+AFTER INSERT ON sells_record
+FOR EACH ROW
+UPDATE customer_bill
+SET amount = amount + (
+    SELECT min_price FROM inventory 
+    WHERE inventory.pattern = NEW.pattern
+    AND inventory.design = NEW.design
+    AND inventory.colour = NEW.colour
+    AND inventory.size = NEW.size
+);
