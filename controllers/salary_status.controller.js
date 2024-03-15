@@ -43,8 +43,8 @@ const salaryStatusController = {
         try {
             const {id} = req.params;
             const {grand_total, upad, jama, credited} = req.body;
-            const sql = 'UPDATE salary_status SET grand_total = ?, upad = ?, jama = ?, credited = ?;';
-            const [rows, fields] = await pool.query(sql, [grand_total, upad, jama, credited]);
+            const sql = 'UPDATE salary_status SET grand_total = ?, upad = ?, jama = ?, credited = ? WHERE user_id = ?;';
+            const [rows, fields] = await pool.query(sql, [grand_total, upad, jama, credited, id]);
             res.status(200).json({
                 status: 200,
                 data: 'Salary status updated'
