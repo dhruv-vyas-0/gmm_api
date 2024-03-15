@@ -10,7 +10,7 @@ create table credentials(
 user_id INT NOT NULL,
 password VARCHAR(255) NOT NULL,
 role VARCHAR(10) NOT NULL,
-FOREIGN KEY (user_id) REFERENCES users(user_id)
+FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 create table salary_status(
