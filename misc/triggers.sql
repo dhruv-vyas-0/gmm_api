@@ -34,3 +34,9 @@ INSERT INTO inventory(pattern, design, colour, size, stock)
 VALUES (NEW.pattern, NEW.design, NEW.colour, NEW.size, NEW.piece)
 ON DUPLICATE KEY
 UPDATE stock = stock + NEW.piece;
+
+CREATE TRIGGER generate_new_customer_bill_entry
+AFTER INSERT ON customers
+FOR EACH ROW
+INSERT INTO customer_bill(customer_id, amount)
+VALUES (NEW.customer_id, 0);
