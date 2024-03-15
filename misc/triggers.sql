@@ -61,5 +61,6 @@ SET amount = amount + (
     AND inventory.design = NEW.design
     AND inventory.colour = NEW.colour
     AND inventory.size = NEW.size
-);
+) * NEW.pieces
+WHERE customer_bill.customer_id = NEW.customer_id;
 
