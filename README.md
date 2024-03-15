@@ -7,8 +7,8 @@ This README includes all the steps necessary to get this project running on your
 #### Setting up database
 - Make sure you have mysql-server installed and running.
 - create a new database by `CREATE DATABASE databasename;`
-- Make all the tables from `misc/tables.sql` file. Just copy the whole file and paste it into your mysql terminal.
-- Create necessary triggers by copying `misc/triggers.sql`  file into your mysql terminal.
+- Make all the tables from `database_schema/tables.sql` file. Just copy the whole file and paste it into your mysql terminal.
+- Create necessary triggers by copying `database_schema/triggers.sql`  file into your mysql terminal.
 - Database is ready.
 
 #### Setting up project
