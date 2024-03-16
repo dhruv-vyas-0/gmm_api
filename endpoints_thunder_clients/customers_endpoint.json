@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "customers",
+    "dateExported": "2024-03-16T12:43:16.623Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9e081d0f-3791-45db-97c1-c196923108d9",
+            "colId": "ddbd8e07-f338-4f79-afda-7034bb209c56",
+            "containerId": "",
+            "name": "Get all customers record",
+            "url": "localhost:6789/api/v1/customers",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-16T12:09:17.510Z",
+            "modified": "2024-03-16T12:09:17.510Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3437d15e-b2b0-4d7b-88a4-7109cce4aae7",
+            "colId": "ddbd8e07-f338-4f79-afda-7034bb209c56",
+            "containerId": "",
+            "name": "Get customer record using id",
+            "url": "localhost:6789/api/v1/customers/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-16T12:19:10.014Z",
+            "modified": "2024-03-16T12:19:10.014Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "286a8949-51db-4daf-b6aa-0f5a0cc1c70f",
+            "colId": "ddbd8e07-f338-4f79-afda-7034bb209c56",
+            "containerId": "",
+            "name": "Create a new customer",
+            "url": "localhost:6789/api/v1/customers",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-16T12:28:49.838Z",
+            "modified": "2024-03-16T12:28:49.838Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Kashyap Diyora\",\n  \"email\": \"diyorakashyap@example.com\",\n  \"phone\": \"6667778989\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "45b023f8-0a56-4a27-a747-75a8ba412771",
+            "colId": "ddbd8e07-f338-4f79-afda-7034bb209c56",
+            "containerId": "",
+            "name": "Update a customer",
+            "url": "localhost:6789/api/v1/customers/6",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-16T12:37:04.663Z",
+            "modified": "2024-03-16T12:37:04.663Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Varshit Mehta\",\n  \"email\": \"varshitmehta@example.com\",\n  \"phone\": \"9998886767\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "44e473be-c8db-477c-b2ae-af062f9d09f6",
+            "colId": "ddbd8e07-f338-4f79-afda-7034bb209c56",
+            "containerId": "",
+            "name": "Delete a customer",
+            "url": "localhost:6789/api/v1/customers/6",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-16T12:42:49.286Z",
+            "modified": "2024-03-16T12:42:49.286Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
