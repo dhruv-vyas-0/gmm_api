@@ -41,9 +41,9 @@ const cuttingRecordsController = {
     // POST ; create a new cutting record
     createCuttingRecord: async (req, res) => {
         try {
-            const {lot_no, user_id, date_, pattern, fabric, colour, s1, s2, s3, s4, s5, weight, price} = req.body;
-            const sql = 'INSERT INTO cutting_records(lot_no, user_id, date_, pattern, fabric, colour, s1, s2, s3, s4, s5, weight, price) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);'
-            const [rows, fields] = await pool.query(sql, [lot_no, user_id, date_, pattern, fabric, colour, s1, s2, s3, s4, s5, weight, price]);
+            const {lot_no, user_id, pattern, fabric, colour, s1, s2, s3, s4, s5, weight, price} = req.body;
+            const sql = 'INSERT INTO cutting_records(lot_no, user_id, pattern, fabric, colour, s1, s2, s3, s4, s5, weight, price) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);'
+            const [rows, fields] = await pool.query(sql, [lot_no, user_id, pattern, fabric, colour, s1, s2, s3, s4, s5, weight, price]);
             res.status(201).json({
                 status: 200,
                 data: "New record was created successfully."

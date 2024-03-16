@@ -41,9 +41,9 @@ const workEntryController = {
     // POST : create a new work entry
     createWorkEntry: async (req, res) => {
         try {
-            const { user_id, date_, pattern, design, colour, size_, piece, rate, upad, jama } = req.body;
-            const sql = 'INSERT INTO work_entry(user_id, date_, pattern, design, colour, size_, piece, rate, upad, jama) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
-            const [rows, fields] = await pool.query(sql, [user_id, date_, pattern, design, colour, size_, piece, rate, upad, jama]);
+            const { user_id, pattern, design, colour, size, piece, rate, upad, jama } = req.body;
+            const sql = 'INSERT INTO work_entry(user_id, pattern, design, colour, size, piece, rate, upad, jama) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);';
+            const [rows, fields] = await pool.query(sql, [user_id, pattern, design, colour, size, piece, rate, upad, jama]);
             res.status(200).json({
                 status: 200,
                 data: "Work has been created. It will be reflected into salary status."
