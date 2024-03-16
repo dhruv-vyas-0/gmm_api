@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Login",
-    "dateExported": "2024-03-13T13:10:34.571Z",
+    "dateExported": "2024-03-16T04:34:05.804Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -52,14 +52,15 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-13T13:06:59.852Z",
-            "modified": "2024-03-13T13:06:59.852Z",
+            "modified": "2024-03-16T04:33:28.064Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"user_id\": 1,\n  \"password\": \"Dhruv@123\"\n}",
+                "raw": "{\n  \"email\": \"bob.smith@example.com\",\n  \"password\": \"S3cur3PW\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         }
     ]

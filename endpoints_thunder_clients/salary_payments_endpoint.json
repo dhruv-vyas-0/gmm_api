@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "weekly_payments endpoint",
-    "dateExported": "2023-11-05T11:08:49.902Z",
+    "dateExported": "2024-03-16T04:28:54.178Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -38,18 +38,19 @@
             "colId": "727a2674-5392-449c-b606-e6436cded2fe",
             "containerId": "",
             "name": "create a payment to a user",
-            "url": "localhost:6789/api/v1/weekly_payments",
+            "url": "localhost:6789/api/v1/salary_payments",
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-11-05T07:10:18.815Z",
-            "modified": "2023-11-05T10:24:53.375Z",
+            "modified": "2024-03-16T04:22:57.915Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"user_id\": 3,\n  \"year_\": 2023,\n  \"month\": 11,\n  \"week\": 1,\n  \"amount\": 2000\n}",
+                "raw": "{\n  \"user_id\": 5,\n  \"amount\": 400\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         }
     ]

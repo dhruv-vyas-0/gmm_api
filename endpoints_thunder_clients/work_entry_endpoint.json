@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "work_entry endpoint",
-    "dateExported": "2023-11-05T11:09:15.294Z",
+    "dateExported": "2024-03-16T04:29:21.833Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -42,14 +42,15 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-11-05T07:43:58.199Z",
-            "modified": "2023-11-05T10:24:01.279Z",
+            "modified": "2024-03-16T04:16:54.157Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"user_id\": 3, \n  \"date_\": \"2023-11-05\", \n  \"pattern\":\"patern 3\", \n  \"design\": \"dull\", \n  \"colour\": \"blue\", \n  \"size_\": 5, \n  \"piece\": 310, \n  \"rate\": 8, \n  \"upad\": 0, \n  \"jama\": 0\n}",
+                "raw": "{\n  \"user_id\": 1,\n  \"pattern\":\"Stripes\", \n  \"design\": \"Floral Print\", \n  \"colour\": \"blue\", \n  \"size\": 5, \n  \"piece\": 310, \n  \"rate\": 8, \n  \"upad\": 0, \n  \"jama\": 0\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         }
     ]

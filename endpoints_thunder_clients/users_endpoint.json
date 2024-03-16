@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "users endpoint",
-    "dateExported": "2024-03-13T13:11:14.883Z",
+    "dateExported": "2024-03-16T04:27:30.001Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -24,13 +24,14 @@
             "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
             "containerId": "",
             "name": "get user by id",
-            "url": "localhost:6789/api/v1/users/1",
+            "url": "localhost:6789/api/v1/users/8",
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-11-05T05:43:23.788Z",
-            "modified": "2024-03-13T11:32:30.713Z",
+            "modified": "2024-03-16T04:06:11.556Z",
             "headers": [],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
@@ -42,14 +43,15 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-11-05T05:43:30.924Z",
-            "modified": "2024-03-13T11:35:53.761Z",
+            "modified": "2024-03-14T13:42:35.951Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Dhruv\",\n  \"email\": \"dv@test.com\",\n  \"work_role\": \"Mover\"\n}",
+                "raw": "{\n  \"name\": \"Varshit\",\n  \"email\": \"vm@test.com\",\n  \"work_role\": \"Manager\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -57,18 +59,19 @@
             "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
             "containerId": "",
             "name": "update a user",
-            "url": "localhost:6789/api/v1/users/1",
+            "url": "localhost:6789/api/v1/users/8",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2023-11-05T05:43:37.828Z",
-            "modified": "2024-03-13T11:34:57.303Z",
+            "modified": "2024-03-16T04:07:00.179Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Kashyap\",\n  \"email\": \"kashyap@test.com\",\n  \"work_role\": \"Cutter\"\n}",
+                "raw": "{\n  \"name\": \"Kashyap Mehta\",\n  \"email\": \"varshitmehta@example.com\",\n  \"work_role\": \"Admin\"\n}",
                 "form": []
             },
+            "reqType": "put",
             "tests": []
         },
         {
@@ -76,13 +79,14 @@
             "colId": "3a507509-3205-4377-98b1-f4f488fe9a9a",
             "containerId": "",
             "name": "delete a user",
-            "url": "localhost:6789/api/v1/users/2",
+            "url": "localhost:6789/api/v1/users/8",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-11-05T05:43:47.347Z",
-            "modified": "2024-03-13T11:36:12.391Z",
+            "modified": "2024-03-16T04:07:22.784Z",
             "headers": [],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]
