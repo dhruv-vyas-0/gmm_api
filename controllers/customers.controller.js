@@ -92,7 +92,25 @@ const customersController = {
                 message: error.message
             });
         }
-    }
+    },
+
+    // PUT : /bill : Update the bill of a customer
+    updateBill: async (req, res) => {
+        try {
+            const { id } = req.params;
+            const { amount } = req.body;
+            const [row, field] = await pool.query("UPDATE customer_bill SET amount = ? WHERE customer_id = ?;", [amount, id]);
+            res.status(200).json({
+                status: 200,
+                message: "Bill updated successfully"
+            });
+        } catch (error) {
+            res.status(500).json({
+                status: 500,
+                message: error.message
+            });
+        }
+    },
 };
 
 module.exports = customersController;

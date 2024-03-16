@@ -18,4 +18,7 @@ customersRouter.put('/:id', customersController.updateCustomer);
 // DELETE : Delete a customer record
 customersRouter.delete('/:id', customersController.deleteCustomer);
 
+// PUT : /bill : Update the bill of a customer
+customersRouter.put('/bill/:id', customersController.updateBill);
+
 module.exports = customersRouter;

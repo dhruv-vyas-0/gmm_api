@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "customers",
-    "dateExported": "2024-03-16T12:43:16.623Z",
+    "dateExported": "2024-03-16T12:58:26.404Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -83,6 +83,25 @@
             "modified": "2024-03-16T12:42:49.286Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "93347124-267b-4c37-93a6-ad582e0d71dc",
+            "colId": "ddbd8e07-f338-4f79-afda-7034bb209c56",
+            "containerId": "",
+            "name": "Update bill of a particular user",
+            "url": "localhost:6789/api/v1/customers/bill/1",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-03-16T12:58:06.548Z",
+            "modified": "2024-03-16T12:58:06.548Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\": 5000\n}",
+                "form": []
+            },
             "tests": []
         }
     ]
