@@ -41,9 +41,9 @@ const salaryPaymentsController = {
     // POST : make a new payment
     createPayment: async (req, res) => {
         try {
-            const { user_id, year_, month, week, amount } = req.body;
-            const sql = 'INSERT INTO salary_payments(user_id, year_, month, week, amount) values(?, ?, ?, ?, ?);';
-            const [rows, fields] = await pool.query(sql, [user_id, year_, month, week, amount]);
+            const { user_id, amount } = req.body;
+            const sql = 'INSERT INTO salary_payments(user_id, amount) values(?, ?);';
+            const [rows, fields] = await pool.query(sql, [user_id, amount]);
             res.status(200).json({
                 status: 200,
                 paymentId: rows.insertId,
