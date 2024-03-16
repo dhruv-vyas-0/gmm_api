@@ -1,0 +1,80 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "inventory",
+    "dateExported": "2024-03-16T08:05:19.717Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "42e7f19d-935e-4b5f-8950-ac4895211aa6",
+            "colId": "42659868-90cd-4f62-ad4c-6eb88c0eb958",
+            "containerId": "",
+            "name": "Get all records from inventory",
+            "url": "localhost:6789/api/v1/inventory",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-16T07:22:41.488Z",
+            "modified": "2024-03-16T07:22:41.488Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "54965993-bde1-483c-aa1b-c34eeef3d4da",
+            "colId": "42659868-90cd-4f62-ad4c-6eb88c0eb958",
+            "containerId": "",
+            "name": "Get a particular record frominventory",
+            "url": "localhost:6789/api/v1/inventory/particular",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-16T07:48:35.331Z",
+            "modified": "2024-03-16T07:48:35.331Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pattern\": \"Argyle\",\n  \"design\": \"Tie-Dye\",\n  \"colour\": \"Yellow\",\n  \"size\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5405e3db-f91d-42b5-ab2e-0ac85bfd7213",
+            "colId": "42659868-90cd-4f62-ad4c-6eb88c0eb958",
+            "containerId": "",
+            "name": "Update cost and margin of a record",
+            "url": "localhost:6789/api/v1/inventory/cost_margin",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-16T07:56:21.004Z",
+            "modified": "2024-03-16T07:56:21.004Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pattern\": \"Argyle\",\n  \"design\": \"Tie-Dye\",\n  \"colour\": \"Yellow\",\n  \"size\": 2,\n  \"cost\": 200,\n  \"margin\": 0.15\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a3b498a8-ec08-4602-a29d-0a05a4afca1d",
+            "colId": "42659868-90cd-4f62-ad4c-6eb88c0eb958",
+            "containerId": "",
+            "name": "Update stock of a record",
+            "url": "localhost:6789/api/v1/inventory/stock",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-16T08:03:21.637Z",
+            "modified": "2024-03-16T08:03:21.637Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pattern\": \"Argyle\",\n  \"design\": \"Tie-Dye\",\n  \"colour\": \"Yellow\",\n  \"size\": 4,\n  \"stock\": 24\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -14,6 +14,7 @@ const cuttingRecordsRouter = require('./routers/cutting_records.router');
 const registerRouter = require('./routers/register.router');
 const loginRouter = require('./routers/login.router');
 const garmentAttributesRouter = require('./routers/garment_attributes.router');
+const inventoryRouter = require('./routers/inventory.router');
 const dashboardSalesRouter = require('./routers/dashboard_sales.router');
 
 app.use('/api/v1/users', usersRouter);
@@ -24,6 +25,7 @@ app.use('/api/v1/cutting_records', cuttingRecordsRouter);
 app.use('/api/v1/register', registerRouter);
 app.use('/api/v1/login', loginRouter);
 app.use('/api/v1/garment_attributes', garmentAttributesRouter);
+app.use('/api/v1/inventory', inventoryRouter);
 app.use('/api/v1/dashboard_sales', dashboardSalesRouter);
 
 const PORT = process.env.SERVER_PORT || 3000;
