@@ -98,6 +98,7 @@ FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 
 CREATE TABLE sells_record(
 selling_id INT PRIMARY KEY AUTO_INCREMENT,
+date DATE NOT NULL DEFAULT (CURDATE()),
 customer_id INT NOT NULL,
 pattern VARCHAR(20) NOT NULL,
 design VARCHAR(20) NOT NULL,
