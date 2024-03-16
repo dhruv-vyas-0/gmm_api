@@ -1,0 +1,308 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Garment Attributes",
+    "dateExported": "2024-03-16T06:41:48.025Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f2c3e9e1-ad04-4f55-a862-e1bafc94d67f",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Get all attributes",
+            "url": "localhost:6789/api/v1/garment_attributes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-16T05:08:08.294Z",
+            "modified": "2024-03-16T05:08:08.294Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cc70aeda-593e-4d6e-a2a0-140864709991",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Get all patterns",
+            "url": "localhost:6789/api/v1/garment_attributes/patterns",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-16T05:29:07.548Z",
+            "modified": "2024-03-16T05:29:07.548Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "88beb332-71c8-4134-aa55-7672a2be6ded",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Create a new pattern",
+            "url": "localhost:6789/api/v1/garment_attributes/patterns",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2024-03-16T05:49:48.188Z",
+            "modified": "2024-03-16T05:49:48.188Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pattern\": \"Plain\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "52594178-5484-4fac-a8eb-6a7bc869266f",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Update a pattern",
+            "url": "localhost:6789/api/v1/garment_attributes/patterns",
+            "method": "PUT",
+            "sortNum": 27500,
+            "created": "2024-03-16T05:58:32.540Z",
+            "modified": "2024-03-16T06:10:10.264Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"before\": \"Plain\",\n  \"after\": \"Simple\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "0262b7a1-1e69-46d7-a9ff-9bdcc5a88c48",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Delete a pattern",
+            "url": "localhost:6789/api/v1/garment_attributes/patterns",
+            "method": "DELETE",
+            "sortNum": 28750,
+            "created": "2024-03-16T06:02:24.244Z",
+            "modified": "2024-03-16T06:02:24.244Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pattern\": \"Simple\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fdbc8eb0-e16b-4248-a691-aefe00973d64",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Get all designs",
+            "url": "localhost:6789/api/v1/garment_attributes/designs",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-16T05:35:30.462Z",
+            "modified": "2024-03-16T05:35:30.462Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2d92a82-299f-4890-8e75-7bb54e649580",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Create a new design",
+            "url": "localhost:6789/api/v1/garment_attributes/designs",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2024-03-16T06:14:03.464Z",
+            "modified": "2024-03-16T06:14:03.464Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"design\": \"Checks\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "64e3f547-1508-4c09-8924-34cf0d0d27da",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Update a design",
+            "url": "localhost:6789/api/v1/garment_attributes/designs",
+            "method": "PUT",
+            "sortNum": 35625,
+            "created": "2024-03-16T06:16:44.016Z",
+            "modified": "2024-03-16T06:16:44.016Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"before\": \"checks\",\n  \"after\": \"checks_modern\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3001ccb2-9f18-422b-abbf-c606b9bf87ef",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Delete a design",
+            "url": "localhost:6789/api/v1/garment_attributes/designs",
+            "method": "DELETE",
+            "sortNum": 36250,
+            "created": "2024-03-16T06:19:49.056Z",
+            "modified": "2024-03-16T06:19:49.056Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"design\": \"checks_modern\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c518c344-6cc7-4d92-a631-4e918c3dc7b5",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Get all colours",
+            "url": "localhost:6789/api/v1/garment_attributes/colours",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-16T05:38:33.035Z",
+            "modified": "2024-03-16T05:38:33.035Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "85bedd8e-69e6-4c2b-a180-5a332201b939",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Create a  new colour",
+            "url": "localhost:6789/api/v1/garment_attributes/colours",
+            "method": "POST",
+            "sortNum": 45000,
+            "created": "2024-03-16T06:24:00.128Z",
+            "modified": "2024-03-16T06:24:00.128Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"colour\": \"Pink\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "91fb35a6-b1ad-4089-8fb7-e9070379cd7d",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Update a colour",
+            "url": "localhost:6789/api/v1/garment_attributes/colours",
+            "method": "PUT",
+            "sortNum": 47500,
+            "created": "2024-03-16T06:26:47.147Z",
+            "modified": "2024-03-16T06:26:47.147Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"before\": \"Pink\",\n  \"after\": \"Magenta\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "69e4920a-fe97-4af0-9975-1ae294e7c1ad",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Delete a colour",
+            "url": "localhost:6789/api/v1/garment_attributes/colours",
+            "method": "DELETE",
+            "sortNum": 48750,
+            "created": "2024-03-16T06:29:31.095Z",
+            "modified": "2024-03-16T06:29:31.096Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"colour\": \"Magenta\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8ec33e92-59a3-46ec-b0f5-a3a036d46336",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Get all sizes",
+            "url": "localhost:6789/api/v1/garment_attributes/sizes",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-16T05:40:16.494Z",
+            "modified": "2024-03-16T05:40:16.494Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2f8de546-56c3-4ffa-8c3e-f7fe6a907306",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Create a new size",
+            "url": "localhost:6789/api/v1/garment_attributes/sizes",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-03-16T06:32:00.190Z",
+            "modified": "2024-03-16T06:32:00.190Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"size\": 7\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e9ba77fd-ecc0-48ca-a052-9634ed2ce914",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Update a size",
+            "url": "localhost:6789/api/v1/garment_attributes/sizes",
+            "method": "PUT",
+            "sortNum": 65000,
+            "created": "2024-03-16T06:40:09.827Z",
+            "modified": "2024-03-16T06:40:09.827Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"before\": 7,\n  \"after\": 6\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "85e36857-7993-42d6-b0e0-ebea8c5ff2d1",
+            "colId": "30f69b4c-37d4-4618-920c-15edc66a11a2",
+            "containerId": "",
+            "name": "Delete a size",
+            "url": "localhost:6789/api/v1/garment_attributes/sizes",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-03-16T06:38:17.357Z",
+            "modified": "2024-03-16T06:38:17.357Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"size\": 6\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
