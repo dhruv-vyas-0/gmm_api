@@ -6,7 +6,7 @@ VALUES
 ('Chris Evans', 'chris.evans@example.com', 'Worker'),
 ('Olivia Davis', 'olivia.davis@example.com', 'Worker'),
 ('Max Wilson', 'max.wilson@example.com', 'Worker'),
-('Sophia Martinez', 'sophia.martinez@example.com', 'Cutter'),
+('Sophia Martinez', 'sophia.martinez@example.com', 'Cutter');
 
 INSERT INTO credentials (user_id, password, role)
 VALUES 
@@ -106,4 +106,3 @@ VALUES
 (2023, 10, 11000000),
 (2023, 11, 9000000),
 (2023, 12, 8000000);
-
