@@ -96,7 +96,7 @@ amount FLOAT NOT NULL,
 FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
-CREATE TABLE sells_record(
+CREATE TABLE selling_records(
 selling_id INT PRIMARY KEY AUTO_INCREMENT,
 date DATE NOT NULL DEFAULT (CURDATE()),
 customer_id INT NOT NULL,
@@ -138,4 +138,3 @@ month INT NOT NULL,
 sales INT NOT NULL DEFAULT 0,
 PRIMARY KEY(year, month)
 );
-

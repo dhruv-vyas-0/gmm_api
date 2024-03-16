@@ -84,7 +84,7 @@ VALUES
 ('Emily Brown', 'emilybrown@example.com', '7890123456'),
 ('David Wilson', 'davidwilson@example.com', '2345678901');
 
-INSERT INTO sells_record (customer_id, pattern, design, colour, size, pieces)
+INSERT INTO selling_records (customer_id, pattern, design, colour, size, pieces)
 VALUES 
 (1, 'Argyle', 'Tie-Dye', 'Yellow', 2, 20),
 (2, 'Houndstooth', 'Geometric', 'Green', 3, 8),
