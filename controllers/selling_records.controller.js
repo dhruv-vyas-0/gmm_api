@@ -40,7 +40,7 @@ const sellingRecordController = {
         try {
             const { customer_id, pattern, design, colour, size, pieces } = req.body;
 
-            const sql = "SELECT stock, cost FROM inventory WHERE pattern = ? AND design = ? AND colour = ? AND size = ?;";
+            const sql = "SELECT stock, min_price FROM inventory WHERE pattern = ? AND design = ? AND colour = ? AND size = ?;";
             const [records, fields] = await pool.query(sql, [pattern, design, colour, size]);
 
             if (records.length === 0) {
@@ -53,7 +53,7 @@ const sellingRecordController = {
                     status: 400,
                     message: "Not enough stock."
                 });
-            } else if (records[0].cost === 0) {
+            } else if (records[0].min_price === 0) {
                 res.status(400).json({
                     status: 400,
                     message: "Selling not allowed when cost is zero"
@@ -64,8 +64,8 @@ const sellingRecordController = {
                     message: "Selling not allowed when pieces is zero"
                 });
             } else {
-                const sql = "INSERT INTO selling_records(customer_id, pattern, design, colour, size, pieces) VALUES (?, ?, ?, ?, ?, ?);";
-                const [rows, field] = await pool.query(sql, [customer_id, pattern, design, colour, size, pieces]);
+                const sql = "INSERT INTO selling_records(customer_id, pattern, design, colour, size, pieces, amount) VALUES (?, ?, ?, ?, ?, ?, ?);";
+                const [rows, field] = await pool.query(sql, [customer_id, pattern, design, colour, size, pieces, pieces * records[0].min_price]);
 
                 res.status(200).json({
                     status: 200,
