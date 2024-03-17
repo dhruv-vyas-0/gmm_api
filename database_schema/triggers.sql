@@ -55,11 +55,5 @@ CREATE TRIGGER increase_bill_after_sell
 AFTER INSERT ON selling_records
 FOR EACH ROW
 UPDATE customer_bill
-SET amount = amount + (
-    SELECT min_price FROM inventory 
-    WHERE inventory.pattern = NEW.pattern
-    AND inventory.design = NEW.design
-    AND inventory.colour = NEW.colour
-    AND inventory.size = NEW.size
-) * NEW.pieces
+SET amount = amount + NEW.amount
 WHERE customer_bill.customer_id = NEW.customer_id;
