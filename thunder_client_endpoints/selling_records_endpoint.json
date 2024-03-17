@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "selling_records",
+    "dateExported": "2024-03-17T03:31:31.029Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "238096ff-cafd-428b-b213-31daf5e9f636",
+            "colId": "fac11b35-d53c-4a64-9a58-9bece6c9f0d3",
+            "containerId": "",
+            "name": "Get all selling records",
+            "url": "localhost:6789/api/v1/selling_records",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-17T02:42:23.849Z",
+            "modified": "2024-03-17T02:42:23.849Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8d8df0fd-c7bd-4a23-ab41-f4a84c9c90b5",
+            "colId": "fac11b35-d53c-4a64-9a58-9bece6c9f0d3",
+            "containerId": "",
+            "name": "Get records of a particular product",
+            "url": "localhost:6789/api/v1/selling_records/particular",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-17T02:50:05.988Z",
+            "modified": "2024-03-17T02:50:05.988Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pattern\": \"Houndstooth\",\n  \"design\": \"Geometric\",\n  \"colour\": \"Green\",\n  \"size\": 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cc5f0a6b-55b9-4ba8-aa49-248036899f18",
+            "colId": "fac11b35-d53c-4a64-9a58-9bece6c9f0d3",
+            "containerId": "",
+            "name": "Create a new selling record",
+            "url": "localhost:6789/api/v1/selling_records",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-17T03:13:41.967Z",
+            "modified": "2024-03-17T03:13:41.967Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer_id\": 1,\n  \"pattern\": \"Chevron\",\n  \"design\": \"Animal Print\",\n  \"colour\": \"Black\",\n  \"size\": 5,\n  \"pieces\": 50\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -16,6 +16,7 @@ const loginRouter = require('./routers/login.router');
 const garmentAttributesRouter = require('./routers/garment_attributes.router');
 const inventoryRouter = require('./routers/inventory.router');
 const customersRouter = require('./routers/customers.router');
+const sellingRecordsRouter = require('./routers/selling_records.router');
 const dashboardSalesRouter = require('./routers/dashboard_sales.router');
 
 app.use('/api/v1/users', usersRouter);
@@ -28,6 +29,7 @@ app.use('/api/v1/login', loginRouter);
 app.use('/api/v1/garment_attributes', garmentAttributesRouter);
 app.use('/api/v1/inventory', inventoryRouter);
 app.use('/api/v1/customers', customersRouter);
+app.use('/api/v1/selling_records', sellingRecordsRouter);
 app.use('/api/v1/dashboard_sales', dashboardSalesRouter);
 
 const PORT = process.env.SERVER_PORT || 3000;
