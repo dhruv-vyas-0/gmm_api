@@ -1,39 +1,40 @@
 {
     "client": "Thunder Client",
     "collectionName": "Login",
-    "dateExported": "2024-03-16T04:34:05.804Z",
+    "dateExported": "2024-03-18T05:01:42.061Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "19e4e5e9-26df-4a15-aae6-16ae7c65e33c",
-            "colId": "59dbeef0-4597-4065-9175-a2f4e2a0dcac",
+            "_id": "d8715937-b81a-4907-ae65-a5a3d95049c5",
+            "colId": "3d3d6091-bb19-411c-b134-b9d427469695",
             "containerId": "",
             "name": "Register User",
             "url": "localhost:6789/api/v1/register",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-13T12:03:39.470Z",
-            "modified": "2024-03-13T12:22:53.281Z",
+            "created": "2024-03-16T06:53:34.819Z",
+            "modified": "2024-03-18T05:01:27.247Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"user_id\": 1,\n  \"password\": \"Dhruv@123\",\n  \"role\": \"employee\"\n}",
+                "raw": "{\n  \"email\": \"vm@test.com\",\n  \"password\": \"Varshit@123\",\n  \"role\": \"admin\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "4e0d3edb-2a3c-4da1-9b99-72d47fcb5cd9",
-            "colId": "59dbeef0-4597-4065-9175-a2f4e2a0dcac",
+            "_id": "45d34a2a-d030-46d6-a439-3d830e4bb46e",
+            "colId": "3d3d6091-bb19-411c-b134-b9d427469695",
             "containerId": "",
             "name": "Update Password or Role",
             "url": "localhost:6789/api/v1/register",
             "method": "PUT",
             "sortNum": 20000,
-            "created": "2024-03-13T12:12:30.695Z",
-            "modified": "2024-03-13T12:12:30.695Z",
+            "created": "2024-03-16T06:53:34.820Z",
+            "modified": "2024-03-16T06:53:34.820Z",
             "headers": [],
             "params": [],
             "body": {
@@ -44,15 +45,15 @@
             "tests": []
         },
         {
-            "_id": "8a6bff3a-ec30-40e3-aece-bbf5e952f813",
-            "colId": "59dbeef0-4597-4065-9175-a2f4e2a0dcac",
+            "_id": "4c9b762c-e629-4e1f-9c86-701c02b44ff6",
+            "colId": "3d3d6091-bb19-411c-b134-b9d427469695",
             "containerId": "",
             "name": "login",
             "url": "localhost:6789/api/v1/login",
             "method": "POST",
             "sortNum": 30000,
-            "created": "2024-03-13T13:06:59.852Z",
-            "modified": "2024-03-16T04:33:28.064Z",
+            "created": "2024-03-16T06:53:34.821Z",
+            "modified": "2024-03-16T06:53:34.821Z",
             "headers": [],
             "params": [],
             "body": {
@@ -60,7 +61,6 @@
                 "raw": "{\n  \"email\": \"bob.smith@example.com\",\n  \"password\": \"S3cur3PW\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         }
     ]
