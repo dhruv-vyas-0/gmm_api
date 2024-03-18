@@ -29,7 +29,7 @@ payment_id INT PRIMARY KEY AUTO_INCREMENT,
 user_id INT NOT NULL,
 date DATE NOT NULL DEFAULT (CURDATE()),
 amount FLOAT NOT NULL,
-FOREIGN KEY (user_id) REFERENCES users(user_id)
+FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 CREATE TABLE patterns(
@@ -60,7 +60,7 @@ rate FLOAT NOT NULL,
 total FLOAT AS (piece * rate) STORED NOT NULL,
 upad FLOAT DEFAULT 0,
 jama FLOAT DEFAULT 0,
-FOREIGN KEY (user_id) REFERENCES users(user_id),
+FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
 FOREIGN KEY (pattern) REFERENCES patterns(pattern),
 FOREIGN KEY (design) REFERENCES designs(design),
 FOREIGN KEY (colour) REFERENCES colours(colour),
@@ -130,7 +130,7 @@ weight FLOAT NOT NULL,
 price FLOAT NOT NULL,
 total_price FLOAT AS (weight * price) STORED,
 ratio FLOAT AS (total_price / total_cutting) STORED,
-FOREIGN KEY (user_id) REFERENCES users(user_id)
+FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 CREATE TABLE monthly_sales(
