@@ -139,3 +139,12 @@ month INT NOT NULL,
 sales INT NOT NULL DEFAULT 0,
 PRIMARY KEY(year, month)
 );
+
+CREATE TABLE payment_logs(
+    log_id INT PRIMARY KEY AUTO_INCREMENT,
+    date DATE DEFAULT (CURDATE()),
+    user_id INT NOT NULL,
+    type varchar(10) NOT NULL,
+    amount FLOAT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
