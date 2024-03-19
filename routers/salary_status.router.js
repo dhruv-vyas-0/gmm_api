@@ -12,4 +12,7 @@ salaryStatusRouter.get('/:id', salaryStatusController.getById);
 // PUT : update salary status
 salaryStatusRouter.put('/:id', salaryStatusController.updateSalaryStatus);
 
+// POST : settle sarary_status
+salaryStatusRouter.post('/settle/:id', salaryStatusController.settleStatus);
+
 module.exports = salaryStatusRouter;

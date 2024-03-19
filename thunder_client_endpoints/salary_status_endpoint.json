@@ -1,48 +1,48 @@
 {
     "client": "Thunder Client",
     "collectionName": "salary_status endpoint",
-    "dateExported": "2024-03-16T04:28:09.844Z",
+    "dateExported": "2024-03-19T05:01:20.638Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "b04882ef-dc61-484f-ab3e-7dda6c3f5915",
-            "colId": "5891f278-b335-4903-9116-86e3fdefd209",
+            "_id": "9f69ac32-fc5c-4cf8-b4a8-f6e0b15f57f7",
+            "colId": "989f09d8-2b68-4243-a8dd-6700f80dabc2",
             "containerId": "",
             "name": "get all salary status",
             "url": "localhost:6789/api/v1/salary_status",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2023-11-05T06:10:39.141Z",
-            "modified": "2023-11-05T06:10:39.141Z",
+            "created": "2024-03-19T04:35:14.516Z",
+            "modified": "2024-03-19T04:35:14.516Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "3ef08d2b-79b7-49df-98f9-4108508fe2b6",
-            "colId": "5891f278-b335-4903-9116-86e3fdefd209",
+            "_id": "f08ce75c-7b09-4e82-ab3d-8582323f15fc",
+            "colId": "989f09d8-2b68-4243-a8dd-6700f80dabc2",
             "containerId": "",
             "name": "get salary satatus by id",
             "url": "localhost:6789/api/v1/salary_status/1",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2023-11-05T06:10:31.806Z",
-            "modified": "2024-03-13T11:37:39.499Z",
+            "created": "2024-03-19T04:35:14.515Z",
+            "modified": "2024-03-19T04:35:14.515Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "9b524216-c9c6-4bc8-bdf5-7a5711a80831",
-            "colId": "5891f278-b335-4903-9116-86e3fdefd209",
+            "_id": "d133c3bc-efc8-41b9-9dd5-c27bfbad2f9b",
+            "colId": "989f09d8-2b68-4243-a8dd-6700f80dabc2",
             "containerId": "",
             "name": "update salary status",
             "url": "localhost:6789/api/v1/salary_status/4",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2023-11-05T06:36:21.544Z",
-            "modified": "2024-03-16T04:08:26.076Z",
+            "created": "2024-03-19T04:35:14.517Z",
+            "modified": "2024-03-19T04:35:14.517Z",
             "headers": [],
             "params": [],
             "body": {
@@ -50,7 +50,20 @@
                 "raw": "{\n  \"grand_total\": 0,\n  \"upad\": 0,\n  \"jama\": 0,\n  \"credited\": 0\n}",
                 "form": []
             },
-            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "90531663-37a3-4141-bf6d-49a6ed1f45ec",
+            "colId": "989f09d8-2b68-4243-a8dd-6700f80dabc2",
+            "containerId": "",
+            "name": "Settle salary",
+            "url": "localhost:6789/api/v1/salary_status/settle/2",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-19T05:01:02.561Z",
+            "modified": "2024-03-19T05:01:02.561Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]
