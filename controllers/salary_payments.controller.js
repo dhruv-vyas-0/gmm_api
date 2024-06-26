@@ -19,6 +19,24 @@ const salaryPaymentsController = {
         }
     },
 
+    // GET ; get all payments logs till now
+    getAllLogs: async (req, res) => {
+        try {
+            const sql = 'SELECT * FROM payment_logs;';
+            const [rows, fields] = await pool.query(sql);
+            res.status(200).json({
+                status: 200,
+                data: rows
+            });
+        } catch (error) {
+            console.log(error.message);
+            res.status(500).json({
+                status: 500,
+                message: error.message
+            });
+        }
+    },
+
     // GET : get payments done to a particular user
     getById: async (req, res) => {
         try {

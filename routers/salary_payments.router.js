@@ -6,6 +6,9 @@ const salaryPaymnetsRouter = Router();
 // GET ; get all payments till now
 salaryPaymnetsRouter.get('/', salaryPaymentsController.getAll);
 
+// GET : get all payment logs
+salaryPaymnetsRouter.get('/logs', salaryPaymentsController.getAllLogs);
+
 // GET : get payments done to a particular user
 salaryPaymnetsRouter.get('/:id', salaryPaymentsController.getById);
 
